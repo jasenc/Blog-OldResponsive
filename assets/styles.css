@@ -3,7 +3,7 @@
   Imports
   ========================================
 */
-@import url(http://fonts.googleapis.com/css?family=Titillium+Web:400,200italic,300,700,600);
+@import url(http://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,700,600);
 
 @import url(http://fonts.googleapis.com/css?family=Exo+2:400,200,300,700);
 
@@ -110,7 +110,7 @@ table {
 
 h1 {
   font-size: 4em;
-  font-weight: 400;
+  font-weight: 200;
   line-height: 1.25em;
 }
 
@@ -146,7 +146,10 @@ h5 {
 */
 
 body {
-  background: #CCCCCC;
+  background: -webkit-linear-gradient(#FFFFFF, #CCCCCC); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#FFFFFF, #CCCCCC); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#FFFFFF, #CCCCCC); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#FFFFFF, #CCCCCC); /* Standard syntax */
   color: #333333;
   font: 300 16px/22px "Titillium Web", "Exo 2", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
@@ -160,6 +163,10 @@ h4 {
   margin: 2%;
 }
 
+.wrapper {
+  
+}
+
 /*
   ========================================
   Header
@@ -167,10 +174,13 @@ h4 {
 */
 
 .header {
-  background-color: #000033;
+    background: -webkit-linear-gradient(#FFFFFF, #000033); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#FFFFFF, #000033); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#FFFFFF, #000033); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#000033, #333333); /* Standard syntax */
   color: #CCCCCC;
   padding: 2%;
-    margin: 2% 2% 0 2%;
+    margin: 0 2% 0 2%;
 }
 
 .header h1 {
