@@ -3,9 +3,8 @@
   Imports
   ========================================
 */
-@import url(http://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,700,600);
 
-@import url(http://fonts.googleapis.com/css?family=Exo+2:400,200,300,700);
+@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700);
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -25,35 +24,35 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
-  display: block;
+    display: block;
 }
 body {
-  line-height: 1;
+    line-height: 1;
 }
 ol, ul {
-  list-style: none;
+    list-style: none;
 }
 blockquote, q {
-  quotes: none;
+    quotes: none;
 }
 blockquote:before, blockquote:after,
 q:before, q:after {
-  content: '';
-  content: none;
+    content: '';
+    content: none;
 }
 table {
-  border-collapse: collapse;
-  border-spacing: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 
 
@@ -61,31 +60,52 @@ table {
   Grid
   ========================================
 */
+
 *, 
 *:after, 
 *:before {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-[class*='col-'] {
-  float: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 .col-1-3 {
-  width: 33.33%;
+    width: 100%;
 }
 .col-2-3 {
-  width: 66.66%;
+    width: 100%;
+}
+
+
+@media only screen and (min-width: 480px) {
+    [class*='col-'] {
+        float: left;
+    }
+
+    .col-1-3 {
+        width: 33.33%;
+    }
+    
+    .col-2-3 {
+        width: 66.66%;
+    }
+}
+
+[class*='col-'] {
+    float: left;
+    padding-right: 2%;
+}
+
+[class*='col-']:last-of-type {
+    padding-right: 0;
 }
 
 .grid-pad {
-  padding: 2% 0 2% 2%;
+    padding: 2% 0 2% 2%;
 }
 
 .grid-pad > [class*='col-']:last-of-type {
-  padding-right: 2%;
+    padding-right: 2%;
 }
 
 /*
@@ -97,9 +117,9 @@ table {
 .grid-pad,
 .clearfix:before,
 .clearfix:after {
-  content: "";
-  display: table;
-  clear: both;
+    content: "";
+    display: table;
+    clear: both;
 }
 
 /*
@@ -109,35 +129,30 @@ table {
 */
 
 h1 {
-  font-size: 4em;
-  font-weight: 200;
-  line-height: 1.25em;
+    font-size: 4em;
+    font-weight: 300;
+    line-height: 1.25em;
 }
 
 h2 {
-  font-size: 2em;
-  font-weight: 200;
-  line-height: 1.25em;
+    font-size: 2em;
+    font-weight: 300;
+    line-height: 1.25em;
 }
 
 h4 {
-  font-size: 1.5em;
-  font-weight: 400;
-  line-height: 1.25em;  
+    font-size: 1.5em;
+    font-weight: 400;
+    line-height: 1.25em;  
 }
 
 h5 {
-  font-size: 1.25em;
-  text-align: center;
-  display: block;
-  margin: 2%;
+    font-size: 1.25em;
 }
 
 .nav {
-  font-weight: 400;
+    font-weight: 400;
 }
-
-/*
 
 /*
   ========================================
@@ -146,25 +161,36 @@ h5 {
 */
 
 body {
-  background: -webkit-linear-gradient(#FFFFFF, #CCCCCC); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(#FFFFFF, #CCCCCC); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(#FFFFFF, #CCCCCC); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(#FFFFFF, #CCCCCC); /* Standard syntax */
-  color: #333333;
-  font: 300 16px/22px "Titillium Web", "Exo 2", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background: -webkit-linear-gradient(#FFFFFF, #CCCCCC); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#FFFFFF, #CCCCCC); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#FFFFFF, #CCCCCC); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#FFFFFF, #FFFFFF); /* Standard syntax */
+    color: #020202;
+    font: 400 16px/22px 'Roboto Condensed' Helvetica, Arial, sans-serif;
+    width: 100%;
 }
 
 p {
-  text-indent: 2em;
+    text-indent: 2%;
 }
 
-h4 {
-  display: block;
-  margin: 2%;
+/*
+  ========================================
+  Buttons
+  ========================================
+*/
+
+.btn a {
+    border: 1.5px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 10px;
 }
 
-.wrapper {
-  
+.btn a:hover {
+    text-decoration: underline;
 }
 
 /*
@@ -175,16 +201,12 @@ h4 {
 
 .header {
     background: -webkit-linear-gradient(#FFFFFF, #000033); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(#FFFFFF, #000033); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(#FFFFFF, #000033); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(#000033, #333333); /* Standard syntax */
-  color: #CCCCCC;
-  padding: 2%;
+    background: -o-linear-gradient(#FFFFFF, #000033); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#FFFFFF, #000033); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#395C6B, #0D324D); /* Standard syntax */
+    color: #EEEEEE;
+    padding: 2%;
     margin: 0 2% 0 2%;
-}
-
-.header h1 {
-
 }
 
 /*
@@ -193,12 +215,25 @@ h4 {
   ========================================
 */
 
-.nav {
-  margin-top: 2%;
-}
 .nav li {
-  display: inline-block;
-  vertical-align: bottom;
+    display: inline-block;
+    vertical-align: bottom;
+}
+
+.btn-nav a{
+    background: #0D324D;
+    color: #EEEEEE;
+    border-color: #EEEEEE;
+}
+
+.btn-nav a:hover{
+    background: #EEEEEE;
+    color: #0D324D;
+}
+
+.selected a {
+    background: #EEEEEE;
+    color: #0D324D;
 }
 
 /*
@@ -215,7 +250,24 @@ h4 {
   ========================================
 */
 
+article {
+    background: #F5F1ED;
+    padding: 2%;
+    margin-bottom: 3%;
+}
 
+article p {
+    padding: 1% 0;
+}
+article h4, 
+article h5 {
+    display: inline-block;
+}
+
+article h5 {
+    text-align: right;
+    float: right;
+}
 
 /*
   ========================================
@@ -223,21 +275,64 @@ h4 {
   ========================================
 */
 
-.about h4{
-  text-align: center;
+.about-cont, 
+.contact-cont {
+    padding-bottom: 6%;
+}
+
+.about, 
+.contact {
+    background: #DAD2BC;
+}
+
+.about h4,
+.contact h4 {
+    text-align: center;
+    display: block;
+    line-height: 2em;
 }
 
 .about img {
-  width: 50%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
+    width: 50%;
+    height: auto;
+    display: block;
+    margin: 2% auto;
 }
 
 .about p {
-  padding: 5% 2%;
+    padding: 2% 2%;
 }
 
+.contact ul {
+    display: block;
+    margin: 0 10%;
+}
+
+.contact li {
+    list-style-type: square;
+}
+
+.contact p {
+    text-indent: 0;
+    padding: 4% 2% 2% 2%;
+}
+
+.btn-about {
+    text-align: center;
+    display: block;
+    margin: 2%;
+}
+
+.btn-about a {
+    background: #DAD2BC;
+    color: #040404;
+    border-color: #040404;
+}
+
+.btn-about a:hover {
+    background: #040404;
+    color: #DAD2BC;
+}
 
 /*
   ========================================
@@ -246,5 +341,9 @@ h4 {
 */
 
 footer {
+    background: #395C6B;
+    color: #EEEEEE;
     text-align: center;
+    margin-top: 10%;
 }
+
