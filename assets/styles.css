@@ -161,10 +161,7 @@ h5 {
 */
 
 body {
-    background: -webkit-linear-gradient(#FFFFFF, #CCCCCC); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(#FFFFFF, #CCCCCC); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(#FFFFFF, #CCCCCC); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(#FFFFFF, #FFFFFF); /* Standard syntax */
+    background: #434a54;
     color: #020202;
     font: 400 16px/22px 'Roboto Condensed' Helvetica, Arial, sans-serif;
     width: 100%;
@@ -336,6 +333,81 @@ article h5 {
 
 /*
   ========================================
+  Media
+  ========================================
+*/
+
+.video-cont {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 35px;
+    height: 0;
+    overflow: hidden;
+}
+
+.video-cont iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/*
+  ========================================
+  Forms
+  ========================================
+*/
+
+form {
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.2);
+    width: 50%;
+    padding: 2%;
+    margin: 2% auto 0 auto;
+}
+
+legend {
+    display: block;
+    margin: 0 auto;
+    font-size: 1.25em;
+}
+
+.email-form label {
+    display: block;
+    margin-top: 5%;
+}
+
+.email-form input {
+    display: block;
+    border-radius: 2px;
+    height: 30px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.email-form textarea {
+    display: block;
+    height: 60px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.btn-submit {
+    border-radius: 5%;
+    cursor: pointer;
+    background: -webkit-linear-gradient(#FFFFFF, #CCCCCC); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#FFFFFF, #CCCCCC); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#FFFFFF, #CCCCCC); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#FFFFFF, #CCCCCC); /* Standard syntax */
+    border-radius: 10px;
+    padding: 5px 15px;
+    font-family: 'Roboto Condensed' Helvetica, Arial, sans-serif;
+}
+
+/*
+  ========================================
   Footer
   ========================================
 */
@@ -346,4 +418,3 @@ footer {
     text-align: center;
     margin-top: 10%;
 }
-
