@@ -415,44 +415,46 @@ legend {
 */
 
 table {
+    border-collapse: separate;
+    border-spacing: 0;
     margin: 0 auto;
 }
 
 caption {
-		border: 1px solid #999999;
-		padding: 0.5em;
-		border-radius: 5px;
-}
-
-th:first-child {
-		border-top-left-radius: 5px;
-}
-
-th:last-child {
-		border-top-right-radius: 5px;
+	border: 1px solid #999999;
+	padding: 0.5em;
+	border-radius: 5px;
 }
 
 td,
 th {
-		border: 1px solid #999999;
-		padding: 0.5em;
+	border: 1px solid #999999;
+	padding: 0.5em;
 }
 
 th {
-		background: #BCE3D4;
-		vertical-align: middle;
+	background: #BCE3D4;
+	vertical-align: middle;
+}
+
+th:first-child {
+	border-top-left-radius: 5px;
+}
+
+th:last-child {
+	border-top-right-radius: 5px;
 }
 
 tbody tr:nth-child(odd) {
-		background: #BCDCE3;
+	background: #BCDCE3;
 }
 
 tfoot tr:last-child td:first-child {
-		border-bottom-left-radius: 5px;
+	border-bottom-left-radius: 5px;
 }
 
 tfoot tr:first-child td:last-child {
-		border-bottom-right-radius: 5px;
+	border-bottom-right-radius: 5px;
 }
 
 .cost {
