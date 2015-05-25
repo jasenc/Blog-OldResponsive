@@ -282,6 +282,30 @@ article {
     background: #DAD2BC;
 }
 
+.about {
+  img {
+      width: 50%;
+      height: auto;
+      display: block;
+      margin: 20px auto;
+  }
+
+  p {
+      padding: 20px 20px;
+  }
+}
+
+.contact {
+  li {
+      list-style-type: square;
+  }
+
+  p {
+      text-indent: 0;
+      padding: 4% 20px 20px 20px;
+  }
+}
+
 .about h4,
 .contact h4 {
     text-align: center;
@@ -289,46 +313,26 @@ article {
     line-height: 2em;
 }
 
-.about img {
-    width: 50%;
-    height: auto;
-    display: block;
-    margin: 20px auto;
-}
-
-.about p {
-    padding: 20px 20px;
-}
-
+.about
 .contact ul {
     display: block;
     margin: 0 10%;
-}
-
-.contact li {
-    list-style-type: square;
-}
-
-.contact p {
-    text-indent: 0;
-    padding: 4% 20px 20px 20px;
 }
 
 .btn-about {
     text-align: center;
     display: block;
     margin: 20px;
-}
+    a {
+        background: #DAD2BC;
+        color: #040404;
+        border-color: #040404;
+    }
 
-.btn-about a {
-    background: #DAD2BC;
-    color: #040404;
-    border-color: #040404;
-}
-
-.btn-about a:hover {
-    background: #040404;
-    color: #DAD2BC;
+    &:hover {
+        background: #040404;
+        color: #DAD2BC;
+    }
 }
 
 /*
@@ -343,14 +347,13 @@ article {
     padding-top: 35px;
     height: 0;
     overflow: hidden;
-}
-
-.video-cont iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
 }
 
 /*
@@ -374,24 +377,26 @@ legend {
     font-size: 1.25em;
 }
 
-.email-form label {
-    display: block;
-    margin-top: 5%;
-}
+.email-form {
+  label {
+      display: block;
+      margin-top: 5%;
+  }
 
-.email-form input {
-    display: block;
-    border-radius: 2px;
-    height: 30px;
-    width: 100%;
-    margin: 0 auto;
-}
+  input {
+      display: block;
+      border-radius: 2px;
+      height: 30px;
+      width: 100%;
+      margin: 0 auto;
+  }
 
-.email-form textarea {
-    display: block;
-    height: 60px;
-    width: 100%;
-    margin: 0 auto;
+  textarea {
+      display: block;
+      height: 60px;
+      width: 100%;
+      margin: 0 auto;
+  }
 }
 
 .btn-submit {
@@ -476,3 +481,5 @@ footer {
     text-align: center;
     margin-top: 10%;
 }
+
+/* Test */
