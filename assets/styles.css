@@ -93,7 +93,8 @@ table {
   Clearfix
   ========================================
 */
-.grid-pad,
+.grid-pad:before,
+.grid-pad:after,
 .clearfix:before,
 .clearfix:after {
   content: "";
@@ -391,6 +392,22 @@ footer {
   text-align: center;
   margin-top: 10%; }
 
-/* Test */
+/* Test*/
+.box {
+  border-radius: 4px;
+  border-top-right-radius: 8px;
+  border-bottom-left-radius: 8px; }
+  .box a {
+    color: blue; }
+
+.menu, .nav {
+  height: 14px;
+  font-size: 10px; }
+  .menu > div, .nav > div {
+    float: left;
+    clear: none; }
+
+.menu {
+  background: #345; }
 
 /*# sourceMappingURL=styles.css.map */

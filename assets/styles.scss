@@ -115,7 +115,8 @@ $pad: 20px;
   ========================================
 */
 
-.grid-pad,
+.grid-pad:before,
+.grid-pad:after,
 .clearfix:before,
 .clearfix:after {
     content: "";
@@ -482,4 +483,62 @@ footer {
     margin-top: 10%;
 }
 
-/* Test */
+
+/* Test*/
+
+//Mixins - good for using arguments and advanced logic
+@mixin roundy($radius, $color) {
+  border-radius: $radius;
+  border-top-right-radius: $radius * 2;
+  border-bottom-left-radius: $radius * 2;
+  a {
+    color: $color;
+  }
+}
+
+.box {
+  @include roundy(4px, blue);
+}
+
+
+
+
+
+// Example of using extend on class
+// .bar {
+//   height: 14px;
+//   font-size: 10px;
+//   > div {
+//       float: left;
+//       clear: none;
+//   }
+// }
+//
+// .menu {
+//   @extend .bar;
+//   background: #345;
+// }
+//
+// .nav {
+//   @extend .bar;
+// }
+
+
+// Extend variable - repeat attributes
+%bar {
+  height: 14px;
+  font-size: 10px;
+  > div {
+      float: left;
+      clear: none;
+  }
+}
+
+.menu {
+  @extend %bar;
+  background: #345;
+}
+
+.nav {
+  @extend %bar;
+}
