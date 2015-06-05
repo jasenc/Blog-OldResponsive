@@ -3,11 +3,14 @@
   Imports
   ========================================
 */
+
 @import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700);
-/* http://meyerweb.com/eric/tools/css/reset/
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 */
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -17,397 +20,461 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline; }
-
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
+article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
-  display: block; }
-
+    display: block;
+}
 body {
-  line-height: 1; }
-
+    line-height: 1;
+}
 ol, ul {
-  list-style: none; }
-
+    list-style: none;
+}
 blockquote, q {
-  quotes: none; }
-
+    quotes: none;
+}
 blockquote:before, blockquote:after,
 q:before, q:after {
-  content: '';
-  content: none; }
-
+    content: '';
+    content: none;
+}
 table {
-  border-collapse: collapse;
-  border-spacing: 0; }
+    border-collapse: collapse;
+    border-spacing: 0;
+}
 
-/*
-  ========================================
+
+/*  ========================================
   Grid
   ========================================
 */
-*,
-*:after,
-*:before {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box; }
 
-.col-1-3,
+*, 
+*:after, 
+*:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+$pad: 20px;
+
+.col-1-3 {
+    width: 100%;
+}
 .col-2-3 {
-  width: 100%; }
+    width: 100%;
+}
+
 
 @media only screen and (min-width: 480px) {
-  [class*='col-'] {
-    float: left; }
+    [class*='col-'] {
+        float: left;
+    }
 
-  .col-1-3 {
-    width: 33.33%; }
+    .col-1-3 {
+        width: 33.33%;
+    }
+    
+    .col-2-3 {
+        width: 66.66%;
+    }
+}
 
-  .col-2-3 {
-    width: 66.66%; } }
 [class*='col-'] {
-  float: left;
-  padding-right: 20px; }
+    float: left;
+    padding-right: 20px;
+}
 
 [class*='col-']:last-of-type {
-  padding-right: 0; }
+    padding-right: 0;
+}
 
 .grid-pad {
-  padding: 20px 0 20px 20px; }
+    padding: 20px 0 20px 20px;
+}
 
 .grid-pad > [class*='col-']:last-of-type {
-  padding-right: 20px; }
+    padding-right: 20px;
+}
 
 /*
   ========================================
   Clearfix
   ========================================
 */
-.grid-pad:before,
-.grid-pad:after,
+
+.grid-pad,
 .clearfix:before,
 .clearfix:after {
-  content: "";
-  display: table;
-  clear: both; }
+    content: "";
+    display: table;
+    clear: both;
+}
 
 /*
   ========================================
   Typography
   ========================================
 */
+
 h1 {
-  font-size: 4em;
-  font-weight: 300;
-  line-height: 1.25em; }
+    font-size: 4em;
+    font-weight: 300;
+    line-height: 1.25em;
+}
 
 h2 {
-  font-size: 2em;
-  font-weight: 300;
-  line-height: 1.25em; }
+    font-size: 2em;
+    font-weight: 300;
+    line-height: 1.25em;
+}
 
 h4 {
-  font-size: 1.5em;
-  font-weight: 400;
-  line-height: 1.25em; }
+    font-size: 1.5em;
+    font-weight: 400;
+    line-height: 1.25em;  
+}
 
 h5 {
-  font-size: 1.25em; }
+    font-size: 1.25em;
+}
 
 .nav {
-  font-weight: 400; }
+    font-weight: 400;
+}
 
 /*
   ========================================
   Custom styles
   ========================================
 */
+
 body {
-  background: #434a54;
-  color: #020202;
-  font: 400 16px/22px 'Roboto Condensed' Helvetica, Arial, sans-serif;
-  width: 100%; }
+    background: #434a54;
+    color: #020202;
+    font: 400 16px/22px 'Roboto Condensed' Helvetica, Arial, sans-serif;
+    width: 100%;
+}
 
 p {
-  text-indent: 20px; }
+    text-indent: 20px;
+}
 
 /*
   ========================================
   Buttons
   ========================================
 */
+
 .btn a {
-  border: 1.5px solid black;
-  border-radius: 5px;
-  padding: 5px;
-  text-decoration: none;
-  display: inline-block;
-  margin-bottom: 10px; }
+    border: 1.5px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 10px;
+}
 
 .btn a:hover {
-  text-decoration: underline; }
+    text-decoration: underline;
+}
 
 /*
   ========================================
   Header
   ========================================
 */
+
 .header {
-  background: -webkit-linear-gradient(#FFFFFF, #000033);
-  /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(#FFFFFF, #000033);
-  /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(#FFFFFF, #000033);
-  /* For Firefox 3.6 to 15 */
-  background: linear-gradient(#395C6B, #0D324D);
-  /* Standard syntax */
-  color: #EEEEEE;
-  padding: 20px;
-  margin: 0 20px 0 20px; }
+    background: -webkit-linear-gradient(#FFFFFF, #000033); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#FFFFFF, #000033); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#FFFFFF, #000033); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#395C6B, #0D324D); /* Standard syntax */
+    color: #EEEEEE;
+    padding: 20px;
+    margin: 0 20px 0 20px;
+}
 
 /*
   ========================================
   Navigation
   ========================================
 */
+
 .nav li {
-  display: inline-block;
-  vertical-align: bottom; }
+    display: inline-block;
+    vertical-align: bottom;
+}
 
-.btn-nav a {
-  background: #0D324D;
-  color: #EEEEEE;
-  border-color: #EEEEEE; }
+.btn-nav a{
+    background: #0D324D;
+    color: #EEEEEE;
+    border-color: #EEEEEE;
+}
 
-.btn-nav a:hover {
-  background: #EEEEEE;
-  color: #0D324D; }
+.btn-nav a:hover{
+    background: #EEEEEE;
+    color: #0D324D;
+}
 
 .selected a {
-  background: #EEEEEE;
-  color: #0D324D; }
+    background: #EEEEEE;
+    color: #0D324D;
+}
 
 /*
   ========================================
   Section
   ========================================
 */
+
+
+
 /*
   ========================================
   Articles
   ========================================
 */
+
 article {
-  background: #F5F1ED;
-  padding: 20px;
-  margin-bottom: 3%; }
-  article article p {
-    padding: 1% 0; }
-  article article h4,
-  article article h5 {
-    display: inline-block; }
-  article article h5 {
+    background: #F5F1ED;
+    padding: 20px;
+    margin-bottom: 3%;
+}
+
+article p {
+    padding: 1% 0;
+}
+article h4, 
+article h5 {
+    display: inline-block;
+}
+
+article h5 {
     text-align: right;
-    float: right; }
+    float: right;
+}
 
 /*
   ========================================
   Aside
   ========================================
 */
-.about-cont,
+
+.about-cont, 
 .contact-cont {
-  padding-bottom: 6%; }
+    padding-bottom: 6%;
+}
 
-.about,
+.about, 
 .contact {
-  background: #DAD2BC; }
-
-.about img {
-  width: 50%;
-  height: auto;
-  display: block;
-  margin: 20px auto; }
-.about p {
-  padding: 20px 20px; }
-
-.contact li {
-  list-style-type: square; }
-.contact p {
-  text-indent: 0;
-  padding: 4% 20px 20px 20px; }
+    background: #DAD2BC;
+}
 
 .about h4,
 .contact h4 {
-  text-align: center;
-  display: block;
-  line-height: 2em; }
+    text-align: center;
+    display: block;
+    line-height: 2em;
+}
+
+.about img {
+    width: 50%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
+
+.about p {
+    padding: 20px 20px;
+}
 
 .contact ul {
-  display: block;
-  margin: 0 10%; }
+    display: block;
+    margin: 0 10%;
+}
+
+.contact li {
+    list-style-type: square;
+}
+
+.contact p {
+    text-indent: 0;
+    padding: 4% 20px 20px 20px;
+}
 
 .btn-about {
-  text-align: center;
-  display: block;
-  margin: 20px; }
-  .btn-about a {
+    text-align: center;
+    display: block;
+    margin: 20px;
+}
+
+.btn-about a {
     background: #DAD2BC;
     color: #040404;
-    border-color: #040404; }
-  .btn-about:hover {
+    border-color: #040404;
+}
+
+.btn-about a:hover {
     background: #040404;
-    color: #DAD2BC; }
+    color: #DAD2BC;
+}
 
 /*
   ========================================
   Media
   ========================================
 */
+
 .video-cont {
-  position: relative;
-  padding-bottom: 56.25%;
-  padding-top: 35px;
-  height: 0;
-  overflow: hidden; }
-  .video-cont iframe {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 35px;
+    height: 0;
+    overflow: hidden;
+}
+
+.video-cont iframe {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%; }
+    height: 100%;
+}
 
 /*
   ========================================
   Forms
   ========================================
 */
+
 form {
-  border: 1px solid black;
-  border-radius: 5px;
-  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.2);
-  width: 50%;
-  padding: 20px;
-  margin: 20px auto 0 auto; }
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.2);
+    width: 50%;
+    padding: 20px;
+    margin: 20px auto 0 auto;
+}
 
 legend {
-  display: block;
-  margin: 0 auto;
-  font-size: 1.25em; }
+    display: block;
+    margin: 0 auto;
+    font-size: 1.25em;
+}
 
 .email-form label {
-  display: block;
-  margin-top: 5%; }
+    display: block;
+    margin-top: 5%;
+}
+
 .email-form input {
-  display: block;
-  border-radius: 2px;
-  height: 30px;
-  width: 100%;
-  margin: 0 auto; }
+    display: block;
+    border-radius: 2px;
+    height: 30px;
+    width: 100%;
+    margin: 0 auto;
+}
+
 .email-form textarea {
-  display: block;
-  height: 60px;
-  width: 100%;
-  margin: 0 auto; }
+    display: block;
+    height: 60px;
+    width: 100%;
+    margin: 0 auto;
+}
 
 .btn-submit {
-  border-radius: 5%;
-  cursor: pointer;
-  background: -webkit-linear-gradient(#FFFFFF, #CCCCCC);
-  /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(#FFFFFF, #CCCCCC);
-  /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(#FFFFFF, #CCCCCC);
-  /* For Firefox 3.6 to 15 */
-  background: linear-gradient(#FFFFFF, #CCCCCC);
-  /* Standard syntax */
-  border-radius: 10px;
-  padding: 5px 15px;
-  font-family: 'Roboto Condensed' Helvetica, Arial, sans-serif; }
+    border-radius: 5%;
+    cursor: pointer;
+    background: -webkit-linear-gradient(#FFFFFF, #CCCCCC); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#FFFFFF, #CCCCCC); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#FFFFFF, #CCCCCC); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#FFFFFF, #CCCCCC); /* Standard syntax */
+    border-radius: 10px;
+    padding: 5px 15px;
+    font-family: 'Roboto Condensed' Helvetica, Arial, sans-serif;
+}
 
 /*
   ========================================
   Tables
   ========================================
 */
+
 table {
-  border-collapse: separate;
-  border-spacing: 0;
-  margin: 0 auto; }
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 0 auto;
+}
 
 caption {
-  border: 1px solid #999999;
-  padding: 0.5em;
-  border-radius: 5px; }
+	border: 1px solid #999999;
+	padding: 0.5em;
+	border-radius: 5px;
+}
 
 td,
 th {
-  border: 1px solid #999999;
-  padding: 0.5em; }
+	border: 1px solid #999999;
+	padding: 0.5em;
+}
 
 th {
-  background: #BCE3D4;
-  vertical-align: middle; }
+	background: #BCE3D4;
+	vertical-align: middle;
+}
 
 th:first-child {
-  border-top-left-radius: 5px; }
+	border-top-left-radius: 5px;
+}
 
 th:last-child {
-  border-top-right-radius: 5px; }
+	border-top-right-radius: 5px;
+}
 
 tbody tr:nth-child(odd) {
-  background: #BCDCE3; }
+	background: #BCDCE3;
+}
 
 tfoot tr:last-child td:first-child {
-  border-bottom-left-radius: 5px; }
+	border-bottom-left-radius: 5px;
+}
 
 tfoot tr:first-child td:last-child {
-  border-bottom-right-radius: 5px; }
+	border-bottom-right-radius: 5px;
+}
 
 .cost {
-  text-align: right; }
+	text-align: right;
+}
 
 .amount {
-  text-align: center; }
+	text-align: center;
+}
+
 
 /*
   ========================================
   Footer
   ========================================
 */
+
 footer {
-  background: #395C6B;
-  color: #EEEEEE;
-  text-align: center;
-  margin-top: 10%; }
-
-/* Test*/
-.box {
-  border-radius: 4px;
-  border-top-right-radius: 8px;
-  border-bottom-left-radius: 8px; }
-  .box a {
-    color: blue; }
-
-.menu, .nav {
-  height: 14px;
-  font-size: 10px; }
-  .menu > div, .nav > div {
-    float: left;
-    clear: none; }
-
-.menu {
-  background: #345; }
-
-/*# sourceMappingURL=styles.css.map */
+    background: #395C6B;
+    color: #EEEEEE;
+    text-align: center;
+    margin-top: 10%;
+}
