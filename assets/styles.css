@@ -51,7 +51,8 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-/*  ========================================
+/*
+  ========================================
   Grid
   ========================================
 */
@@ -253,7 +254,7 @@ article {
   display: block;
   line-height: 2em; }
 
-.about
+.about,
 .contact ul {
   display: block;
   margin: 0 10%; }
